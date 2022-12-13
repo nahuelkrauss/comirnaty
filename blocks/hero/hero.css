@@ -7,20 +7,56 @@ main .hero-container > div {
 main .hero-container {
     padding: 0;
 }
-  
+
 main .hero {
     position: relative;
     padding: 32px;
-    min-height: 300px;
+    min-height: 400px;
 }
 
-main .hero h1 {
+main .hero h1, h2, h3 {
+    color: #FFFFFF;
+}
+
+@media (min-width: 900px) {
+    main .hero {
+        min-height: 500px;
+      }  
+}
+
+main .hero > div > div{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .hero h2 {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     color: white;
+    padding: 0 0 0 0;
+    margin: 0px;
 }
 
+main .hero h3 {
+    font-family: var(--heading2-font-family);
+    color: #FFFFFF;
+    padding: 0 0 0 0;
+    margin: 0px;
+}
+
+main .hero h4 {
+    font-family: var(--heading2-font-family);
+    color: #FFFFFF;
+    padding: 0 0 0 0;
+    margin: 0px;
+}
+
+
+main .hero h6 {
+    font-family: var(--body-font-family);
+    color: #FFFFFF;
+    padding: 0 0 0 0;
+    margin: 0px;
+}
 
 main .hero picture {
     position: absolute;
