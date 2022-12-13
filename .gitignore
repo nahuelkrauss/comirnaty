@@ -1,6 +1,7 @@
 .hlx/*
 coverage/*
 logs/*
+import/*
 node_modules/*
 
 helix-importer-ui
