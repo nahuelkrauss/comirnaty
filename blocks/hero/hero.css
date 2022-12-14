@@ -1,65 +1,105 @@
 /* block specific CSS goes here */
-
-main .hero-container > div {
-    max-width: unset;
-}
-  
 main .hero-container {
-    padding: 0;
+  padding: 0;
 }
 
 main .hero {
+  position: relative;
+  background-color: var(--color-purple);
+  color: var(--background-color);
+}
+
+main .hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: url('../../images/edge.png');
+  background-size: 100% 100%;
+}
+
+main .hero p {
+  margin: 10px 0;
+}
+
+main .hero p.asterisk {
+  position: relative;
+  margin-top: 20px;
+}
+
+main .hero p.asterisk::before {
+  content: '*';
+  position: absolute;
+  left: -.66em;
+  font-size: 80%;
+}
+
+main .hero h1 {
+  margin: 10px 0 20px;
+  line-height: 38px;
+}
+
+main .hero .hero-image img {
+  aspect-ratio: 195 / 134;
+  width: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+main .hero .hero-text {
+  padding: 0 25px 10px;
+}
+
+main .hero .hero-text .picture-wrapper {
+  position: relative;
+  margin: 9px 0 22px;
+}
+
+main .hero .hero-text .picture-wrapper img {
+  max-height: 40px;
+  width: auto;
+}
+
+main .hero .hero-text .picture-wrapper + p {
+  position: relative;
+  padding-top: 22px;
+}
+
+main .hero .hero-text .picture-wrapper + p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  border-top: 7px solid;
+}
+
+@media (min-width: 1024px) {
+  main .hero {
+    background-color: unset;
+  }
+  
+  main .hero h1 {
+    margin: 18px 0 0;
+    line-height: 50px;
+  }
+
+  main .hero p {
+    margin-top: 0;
+  }
+
+  main .hero p.asterisk {
     position: relative;
-    padding: 32px;
-    min-height: 400px;
-}
+    margin-top: 0;
+  }
+  
+  main .hero p.asterisk::before {
+    position: relative;
+    left: 0;
+  }
 
-main .hero.block > div > div h1, h2, h3 {
-    color: #FFFFFF;
-}
-
-@media (min-width: 900px) {
-    main .hero.block {
-        min-height: 500px;
-      }  
-}
-
-main .hero.block > div > div{
-    display: flex;
-    flex-flow: column wrap;
-    text-align: inherit;
-}
-
-main .hero.block > div > div > h2 {
-    max-width: 1200px;
-    color: white;
-    padding: 0 0 0 0;
-    margin: 0px;
-}
-
-main .hero.block > div > div > h3 {
-    font-family: var(--heading2-font-family);
-    color: #FFFFFF;
-    padding: 0 0 0 0;
-    margin: 0px;
-}
-
-main .hero.block > div > div > h4 {
-    font-family: var(--heading2-font-family);
-    color: #FFFFFF;
-    padding: 0 0 0 0;
-    margin: 0px;
-}
-
-
-main .hero.block > div > div > h6 {
-    font-family: var(--body-font-family);
-    color: #FFFFFF;
-    padding: 0 0 0 0;
-    margin: 0px;
-}
-
-main .hero.block picture {
+  main .hero .hero-img picture {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -68,10 +108,50 @@ main .hero.block picture {
     right: 0;
     object-fit: cover;
     box-sizing: border-box;
-}
+  }
 
-main .hero.block img {
-    object-fit: cover;
+  main .hero .hero-image img {
     width: 100%;
-    height: 100%;
+    height: 34vw;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  main .hero .hero-text {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    max-width: 1006px;
+    padding: 52px 16px 0;
+  }
+
+  main .hero .hero-text > div {
+    max-width: 580px;
+  }
+
+  main .hero .hero-text .picture-wrapper {
+    position: absolute;
+    right: 36px;
+    margin-top: 5px;
+  }
+
+  main .hero .hero-text .picture-wrapper img {
+    max-height: 49px;
+  }
+
+  main .hero .hero-text .picture-wrapper + p {
+    padding-top: 0;
+  }
+
+  main .hero .hero-text .picture-wrapper + p::before {
+    top: 9px;
+    left: -95px;
+    border-color: var(--color-purple);
+  }
+
+  main .hero .hero-text strong {
+    font-size: var(--body-font-size-l);
+  }
 }
