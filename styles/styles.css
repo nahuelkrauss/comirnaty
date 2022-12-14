@@ -18,13 +18,17 @@
   --link-hover-color: var(--color-teal);
   --background-color: #fff;
   --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
-  --text-color: #333;
+  --highlight-background-color: #EFF1F4;
+  --highlight-text-color: #333333;
+  --text-color: #333333;
 
   /* fonts */
-  --body-font-family: 'Open Sans', 'open-sans-fallback', sans-serif;
-  --heading-font-family: Impact, 'impact-fallback', sans-serif;
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --body-font-family: 'Open Sans', ubuntu, roboto, noto, sans-serif;
+  --body-font-family-secondary: Impact, ubuntu, roboto, noto, sans-serif;
+  --heading-font-family: 'Impact';
+  --heading2-font-family: 'Open Sans Bold';
+  --fixed-font-family: 'Open Sans', Impact, 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -32,17 +36,43 @@
   --body-font-size-xs: 17px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 85px;
-  --heading-font-size-xl: 45px;
-  --heading-font-size-l: 42px;
+  --heading-font-size-xxl: 42px;
+  --heading-font-size-xl: 38px;
+  --heading-font-size-mxl: 36px;
+  --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
+  --heading-font-size-xxs: 15px; 
 
   /* nav height */
   --nav-height: 64px;
 
 }
+
+@font-face {
+  font-family:"Impact";
+  src: url("/fonts/Impact.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Open Sans";
+  src: url("/fonts/OpenSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Open Sans Bold";
+  src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Open Sans Condensed";
+  src: url("/fonts/OpenSans-CondensedBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Open Sans Extrabold";
+  src: url("/fonts/OpenSans-ExtraBold.ttf") format("truetype");
 
 /* fallback font for Impact */
 @font-face {
@@ -97,10 +127,18 @@ header {
   height: var(--nav-height);
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1, h2, h3 {
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h4, h5, h6 {
+  font-family: var(--body-font-family);
+  font-weight: 400;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -251,10 +289,12 @@ main img {
   :root {
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
+    --heading-font-size-mxl: 42px;
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;  
+    --heading-font-size-xs: 22px;
+    --heading-font-size-xxs: 17px;  
   }
   
   .section > div {
@@ -271,4 +311,36 @@ main .section[data-section-status='initialized'] {
 
 main .section.highlight {
   background-color: var(--highlight-background-color);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 1px;
+  padding-bottom: 20px;
+  color: var(--highlight-text-color);
+  text-align: center;
+}
+
+main .section.highlight .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.highlight .default-content-wrapper > h2 {
+  font-size: var(--heading-font-size-mxl);
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h1, h3, h4, h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h5 {
+  font-size: var(--heading-font-size-xxs);
+  color: var(--highlight-text-color);
 }
