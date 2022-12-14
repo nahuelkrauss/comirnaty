@@ -17,6 +17,7 @@
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #EFF1F4;
+  --highlight-text-color: #333333;
   --text-color: #333333;
 
   /* fonts */
@@ -34,10 +35,12 @@
   /* heading sizes */
   --heading-font-size-xxl: 42px;
   --heading-font-size-xl: 38px;
+  --heading-font-size-mxl: 36px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
+  --heading-font-size-xxs: 15px; 
 
   /* nav height */
   --nav-height: 64px;
@@ -249,10 +252,12 @@ main img {
   :root {
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
+    --heading-font-size-mxl: 42px;
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;  
+    --heading-font-size-xs: 22px;
+    --heading-font-size-xxs: 17px;  
   }
   
   .section > div {
@@ -273,4 +278,32 @@ main .section.highlight {
   padding-right: 0px;
   padding-top: 1px;
   padding-bottom: 20px;
+  color: var(--highlight-text-color);
+  text-align: center;
+}
+
+main .section.highlight .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.highlight .default-content-wrapper > h2 {
+  font-size: var(--heading-font-size-mxl);
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h1, h3, h4, h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--highlight-text-color);
+}
+
+main .section.highlight .default-content-wrapper > h5 {
+  font-size: var(--heading-font-size-xxs);
+  color: var(--highlight-text-color);
 }

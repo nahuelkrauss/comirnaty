@@ -14,36 +14,37 @@ main .hero {
     min-height: 400px;
 }
 
-main .hero h1, h2, h3 {
+main .hero.block > div > div h1, h2, h3 {
     color: #FFFFFF;
 }
 
 @media (min-width: 900px) {
-    main .hero {
+    main .hero.block {
         min-height: 500px;
       }  
 }
 
-main .hero > div > div{
+main .hero.block > div > div{
     display: flex;
     flex-flow: column wrap;
+    text-align: inherit;
 }
 
-main .hero h2 {
+main .hero.block > div > div > h2 {
     max-width: 1200px;
     color: white;
     padding: 0 0 0 0;
     margin: 0px;
 }
 
-main .hero h3 {
+main .hero.block > div > div > h3 {
     font-family: var(--heading2-font-family);
     color: #FFFFFF;
     padding: 0 0 0 0;
     margin: 0px;
 }
 
-main .hero h4 {
+main .hero.block > div > div > h4 {
     font-family: var(--heading2-font-family);
     color: #FFFFFF;
     padding: 0 0 0 0;
@@ -51,14 +52,14 @@ main .hero h4 {
 }
 
 
-main .hero h6 {
+main .hero.block > div > div > h6 {
     font-family: var(--body-font-family);
     color: #FFFFFF;
     padding: 0 0 0 0;
     margin: 0px;
 }
 
-main .hero picture {
+main .hero.block picture {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -69,7 +70,7 @@ main .hero picture {
     box-sizing: border-box;
 }
 
-main .hero img {
+main .hero.block img {
     object-fit: cover;
     width: 100%;
     height: 100%;
