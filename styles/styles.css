@@ -59,25 +59,16 @@
   src: local('Arial');
 }
 
-/* fallback font for Open Sans Bold */
 @font-face {
-  font-family: 'open-sans-bold-fallback';
-  size-adjust: 111.8%;
-  src: local('Arial');
+  font-family: 'Impact';
+  src: url('/fonts/Impact.ttf');
+  font-display: swap;
 }
 
-/* fallback font for Open Sans Extrabold */
 @font-face {
-  font-family: 'open-sans-extrabold-fallback';
-  size-adjust: 115.611%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans Condensed Bold */
-@font-face {
-  font-family: 'open-sans-condensed-bold-fallback';
-  size-adjust: 86.049%;
-  src: local('Arial');
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans.ttf');
+  font-display: swap;
 }
 
 body {
