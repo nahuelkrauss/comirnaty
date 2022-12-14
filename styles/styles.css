@@ -12,27 +12,29 @@
 
  :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --color-teal: #217886;
+
+  --link-color: var(--color-teal);
+  --link-hover-color: var(--color-teal);
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color: #333;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: 'Open Sans', 'open-sans-fallback', sans-serif;
+  --heading-font-family: Impact, 'impact-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
-  --body-font-size-xs: 14px;
+  --body-font-size-xs: 17px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
+  --heading-font-size-xxl: 85px;
+  --heading-font-size-xl: 45px;
+  --heading-font-size-l: 42px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
@@ -40,6 +42,41 @@
   /* nav height */
   --nav-height: 64px;
 
+}
+
+/* fallback font for Impact */
+@font-face {
+  font-family: 'impact-fallback';
+  size-adjust: 90.62%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans */
+@font-face {
+  font-family: 'open-sans-fallback';
+  size-adjust: 104.77%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Bold */
+@font-face {
+  font-family: 'open-sans-bold-fallback';
+  size-adjust: 111.8%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Extrabold */
+@font-face {
+  font-family: 'open-sans-extrabold-fallback';
+  size-adjust: 115.611%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Condensed Bold */
+@font-face {
+  font-family: 'open-sans-condensed-bold-fallback';
+  size-adjust: 86.049%;
+  src: local('Arial');
 }
 
 body {
