@@ -16,19 +16,16 @@
 
   --link-color: var(--color-teal);
   --link-hover-color: var(--color-teal);
+  --text-color: #333;
   --background-color: #fff;
   --overlay-background-color: #eee;
+  --highlight-text-color: var(--text-color);
   --highlight-background-color: #EFF1F4;
-  --highlight-text-color: #333333;
-  --text-color: #333333;
 
   /* fonts */
-  --body-font-family: 'Open Sans', ubuntu, roboto, noto, sans-serif;
-  --body-font-family-secondary: Impact, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: 'Impact';
-  --heading2-font-family: 'Open Sans Bold';
-  --fixed-font-family: 'Open Sans', Impact, 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
-
+  --body-font-family: 'Open Sans', 'open-sans-fallback', sans-serif;
+  --heading-font-family: Impact, 'impact-fallback', sans-serif;
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -36,43 +33,17 @@
   --body-font-size-xs: 17px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 42px;
-  --heading-font-size-xl: 38px;
-  --heading-font-size-mxl: 36px;
-  --heading-font-size-l: 32px;
+  --heading-font-size-xxl: 85px;
+  --heading-font-size-xl: 45px;
+  --heading-font-size-l: 42px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
-  --heading-font-size-xxs: 15px; 
 
   /* nav height */
   --nav-height: 64px;
 
 }
-
-@font-face {
-  font-family:"Impact";
-  src: url("/fonts/Impact.ttf") format("truetype");
-}
-
-@font-face {
-  font-family:"Open Sans";
-  src: url("/fonts/OpenSans.ttf") format("truetype");
-}
-
-@font-face {
-  font-family:"Open Sans Bold";
-  src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family:"Open Sans Condensed";
-  src: url("/fonts/OpenSans-CondensedBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family:"Open Sans Extrabold";
-  src: url("/fonts/OpenSans-ExtraBold.ttf") format("truetype");
 
 /* fallback font for Impact */
 @font-face {
