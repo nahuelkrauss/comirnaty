@@ -68,6 +68,7 @@ main .hero .hero-text .picture-wrapper + p::before {
 @media (min-width: 1024px) {
   main .hero {
     background-color: unset;
+    overflow: hidden;
   }
   
   main .hero h1 {
@@ -112,7 +113,7 @@ main .hero .hero-text .picture-wrapper + p::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 30px);
+    width: calc(100vw - 30px);
     max-width: 1006px;
     padding: 52px 16px 0;
   }
