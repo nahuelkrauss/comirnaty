@@ -1,7 +1,4 @@
-import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
-
 function decorateDoses(section) {
-  console.log('hi from doses', section);
   const cols = [...section.firstElementChild.children];
   // rewrap doses cols
   cols.forEach((col) => {
@@ -34,7 +31,4 @@ export default async function decorate(block) {
 
   const doses = block.querySelector('.primary-series-doses');
   if (doses) decorateDoses(doses);
-
-  // const info = block.querySelector('.primary-series-info');
-  // if (info) decorateInfo(info);
 }
