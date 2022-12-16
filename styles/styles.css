@@ -346,8 +346,6 @@ main .section.highlight::after {
 
 @media (min-width: 992px) {
   main .section.highlight {
-    /* display: grid; */
-    /* grid-template-columns: 80px 1fr; */
     gap: 20px;
     padding-top: 12px;
     padding-left: 120px;
@@ -359,20 +357,6 @@ main .section.highlight::after {
 
   main .section.highlight::after {
     top: 14px;
-  }
-
-  main .section.highlight h2 {
-    /* margin-top: 0; */
-    /* margin-left: 100px; */
-    /* padding-top: 0; */
-  }
-
-  main .section.highlight h2::before {
-    /* display: inline-block; */
-    /* position: initial; */
-    /* height: 1em; */
-    /* top: -15px; */
-    /* left: -100px; */
   }
 }
 
