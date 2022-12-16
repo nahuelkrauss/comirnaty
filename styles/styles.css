@@ -16,7 +16,6 @@
   --color-teal: #217886;
   --color-blue: #657794;
   --color-purple: #503C90;
-
   --link-color: var(--color-teal);
   --link-hover-color: var(--color-teal);
   --text-color: #333;
@@ -29,7 +28,7 @@
   --body-font-family: 'Open Sans', 'open-sans-fallback', sans-serif;
   --strong-font-family: 'Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
   --condensed-font-family: 'Open Sans Condensed Bold', 'open-sans-condensed-bold-fallback', sans-serif;
-  --heading-font-family: Impact, 'impact-fallback', sans-serif;
+  --heading-font-family: 'Impact', 'impact-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -41,7 +40,7 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 42px;
-  --heading-font-size-xl: 45px;
+  --heading-font-size-xl: 42px;
   --heading-font-size-l: 42px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
@@ -65,7 +64,7 @@
 }
 
 @font-face {
-  font-family: 'Impact';
+  font-family: Impact;
   src: url('/fonts/Impact.ttf');
   font-display: swap;
 }
@@ -90,14 +89,14 @@
 
 /* fallback font for Impact */
 @font-face {
-  font-family: 'impact-fallback';
+  font-family: impact-fallback;
   size-adjust: 90.62%;
   src: local('Arial');
 }
 
 /* fallback font for Open Sans */
 @font-face {
-  font-family: 'open-sans-fallback';
+  font-family: open-sans-fallback;
   size-adjust: 104.77%;
   src: local('Arial');
 }
@@ -120,7 +119,7 @@ header {
   height: var(--nav-height);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 400;
   line-height: 1.25;
@@ -131,19 +130,33 @@ h1, h2, h3 {
 
 h4, h5, h6 {
   font-family: var(--body-font-family);
-  font-weight: 400;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+  line-height: 38px;
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -186,6 +199,7 @@ svg {
 
 hr {
   height: 3px;
+  margin: 1.5em 0;
   border: 0;
   border-radius: 6px;
   background-image: url('../images/divider.png');
@@ -273,13 +287,6 @@ main blockquote p::after {
   line-height: 0;
 }
 
-hr {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  border: 0;
-  border-bottom: 1px solid var(--overlay-background-color);
-}
-
 main img {
   max-width: 100%;
   width: auto;
@@ -292,23 +299,12 @@ main img {
   }  
 }
 
-/* @media (min-width: 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-mxl: 42px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
-    --heading-font-size-xxs: 17px;  
-  }
-  
+@media (min-width: 900px) {
   .section > div {
     max-width: 1200px;
     margin: auto;
   }
-} */
+}
 
 /* progressive section appearance */
 main .section[data-section-status='loading'],
@@ -318,36 +314,33 @@ main .section[data-section-status='initialized'] {
 
 main .section.highlight {
   background-color: var(--highlight-background-color);
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 1px;
-  padding-bottom: 20px;
-  color: var(--highlight-text-color);
-  text-align: center;
+  /* padding-left: 0px; */
+  /* padding-right: 0px; */
+  /* padding-top: 1px; */
+  /* padding-bottom: 20px; */
+  /* color: var(--highlight-text-color); */
+  /* text-align: center; */
 }
 
 main .section.highlight .default-content-wrapper {
-  text-align: center;
+  /* text-align: center; */
 }
 
 main .section.highlight .default-content-wrapper > h2 {
-  font-size: var(--heading-font-size-mxl);
-  color: var(--highlight-text-color);
+  /* font-size: var(--heading-font-size-mxl); */
+  /* color: var(--highlight-text-color); */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  /* color: var(--highlight-text-color); */
 }
 
 main .section.highlight .default-content-wrapper > h1, h3, h4, h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: var(--highlight-text-color);
-}
-
-main .section.highlight .default-content-wrapper > h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: var(--highlight-text-color);
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  /* color: var(--highlight-text-color); */
 }
 
 main .section.highlight .default-content-wrapper > h5 {
-  font-size: var(--heading-font-size-xxs);
-  color: var(--highlight-text-color);
+  /* font-size: var(--heading-font-size-xxs); */
+  /* color: var(--highlight-text-color); */
 }

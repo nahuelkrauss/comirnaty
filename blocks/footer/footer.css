@@ -58,12 +58,10 @@ footer .footer-copyright a {
 @media (min-width: 1024px) {
   footer .footer > div {
     display: grid; 
-    grid-template-columns: 272px 1fr; 
-    grid-template-rows: auto 1fr; 
-    grid-template-areas: 
-      'pfizer biontech'
-      'copyright copyright'; 
-  }
+    grid-template: 
+      'pfizer biontech' auto
+      'copyright copyright' 1fr / 272px 1fr; 
+ }
 
   footer .footer-pfizer,
   footer .footer-biontech {

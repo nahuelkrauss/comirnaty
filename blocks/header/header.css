@@ -6,16 +6,13 @@ header {
 header nav {
   box-sizing: border-box;
   display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 70px; 
-  grid-template-rows: 84px 100px 0 0 0; 
+  grid-template: 
+    'links links' 84px
+    'brand hamburger' 100px
+    'nav nav' 0
+    'vaccine-finder vaccine-finder' 0
+    'hamburger-links hamburger-links' 0 / 1fr 70px;
   gap: 0; 
-  grid-template-areas: 
-    'links links'
-    'brand hamburger'
-    'nav nav'
-    'vaccine-finder vaccine-finder'
-    'hamburger-links hamburger-links';
   align-items: center;
   position: relative;
   width: 100%;
@@ -50,12 +47,10 @@ header nav > * {
 
 @media (min-width: 1024px) {
   header nav {
-    grid-template-areas: 
-      'links links links'
-      'brand nav vaccine-finder'
-      'hamburger hamburger-links hamburger-links';
-    grid-template-columns: 1fr auto 215px; 
-    grid-template-rows: 96px 100px 0; 
+    grid-template: 
+      'links links links' 96px
+      'brand nav vaccine-finder' 100px
+      'hamburger hamburger-links hamburger-links' 0 / 1fr auto 215px;
     gap: 0 30px;
   }
 
@@ -206,6 +201,10 @@ header nav[aria-expanded=true] .nav-navigation {
   visibility: visible;
 }
 
+header nav .nav-navigation a {
+  padding-bottom: 10px;
+}
+
 header nav .nav-navigation ul {
   margin: 0;
 }
@@ -220,10 +219,6 @@ header nav .nav-navigation li:first-of-type {
 
 header nav .nav-navigation li:first-of-type a {
   color: var(--background-color);
-}
-
-header nav .nav-navigation a {
-  padding-bottom: 10px;
 }
 
 header nav .nav-navigation strong {
@@ -276,11 +271,10 @@ header nav .nav-vaccine-finder {
   grid-area: vaccine-finder;
   display: none;
   visibility: hidden;
-  padding-right: 15px;
+  padding: 16px 25px;
   font-family: var(--heading-font-family);
   font-size: var(--body-font-size-s);
   line-height: 20px;
-  padding: 16px 25px;
 }
 
 header nav[aria-expanded=true] .nav-vaccine-finder {
@@ -328,12 +322,12 @@ header nav .nav-links ul {
   margin: 0 auto;
   padding: 2px 10px;
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-links li {
   flex: 0 1 auto;
   margin: 6px 0;
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-links a:any-link {
   border-bottom: 1px solid;
 }
@@ -382,7 +376,7 @@ header nav[aria-expanded=true] .nav-hamburger-links {
   display: unset;
   visibility: visible;
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-hamburger-links li {
   padding: 16px 0;
   font-family: var(--condensed-font-family);
