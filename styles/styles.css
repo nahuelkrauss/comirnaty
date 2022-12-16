@@ -40,7 +40,7 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 42px;
-  --heading-font-size-xl: 42px;
+  --heading-font-size-xl: 45px;
   --heading-font-size-l: 42px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
@@ -138,7 +138,7 @@ h1 {
 
 h2 {
   font-size: var(--heading-font-size-xl);
-  line-height: 38px;
+  line-height: 42px;
 }
 
 h3 {
@@ -156,7 +156,6 @@ h5 {
 h6 {
   font-size: var(--heading-font-size-xs);
 }
-
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -190,6 +189,19 @@ code, samp {
 
 pre {
   overflow: scroll;
+}
+
+sup {
+  position: relative;
+  top: -0.5em;
+  vertical-align: top;
+  font-size: 50%;
+}
+
+.footnote {
+  margin: 10px 0;
+  font-size: var(--body-font-size-xs);
+  line-height: 20px;
 }
 
 svg {
@@ -258,10 +270,6 @@ main input:hover {
   border: 1px solid var(--text-color);
 }
 
-main .section {
-  padding: 64px 16px;
-}
-
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
@@ -293,9 +301,13 @@ main img {
   height: auto;
 }
 
+main .section {
+  padding: 30px 25px 20px;
+}
+
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 30px 20px;
   }  
 }
 
@@ -313,13 +325,55 @@ main .section[data-section-status='initialized'] {
 }
 
 main .section.highlight {
+  position: relative;
+  padding-top: 46px;
   background-color: var(--highlight-background-color);
-  /* padding-left: 0px; */
-  /* padding-right: 0px; */
-  /* padding-top: 1px; */
-  /* padding-bottom: 20px; */
-  /* color: var(--highlight-text-color); */
-  /* text-align: center; */
+}
+
+main .section.highlight h2 {
+  margin-top: 0;
+  font-size: var(--heading-font-size-l);
+}
+
+main .section.highlight::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 80px;
+  border-top: 7px solid var(--color-purple);
+}
+
+@media (min-width: 992px) {
+  main .section.highlight {
+    /* display: grid; */
+    /* grid-template-columns: 80px 1fr; */
+    gap: 20px;
+    padding-top: 12px;
+    padding-left: 120px;
+  }
+
+  main .section.highlight h2 {
+    margin-top: 20px;
+  }
+
+  main .section.highlight::after {
+    top: 14px;
+  }
+
+  main .section.highlight h2 {
+    /* margin-top: 0; */
+    /* margin-left: 100px; */
+    /* padding-top: 0; */
+  }
+
+  main .section.highlight h2::before {
+    /* display: inline-block; */
+    /* position: initial; */
+    /* height: 1em; */
+    /* top: -15px; */
+    /* left: -100px; */
+  }
 }
 
 main .section.highlight .default-content-wrapper {
