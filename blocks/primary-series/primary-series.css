@@ -1,0 +1,202 @@
+/* doses row */
+main .primary-series-doses-dose {
+  padding-bottom: 23px;
+  color: var(--color-purple);
+}
+
+main .primary-series-doses-dose:last-of-type {
+  color: var(--color-teal);
+}
+
+main .primary-series-doses-dose p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: var(--heading-font-size-l);
+  line-height: var(--heading-font-size-l);
+}
+
+main .primary-series-doses-dose strong {
+  font-family: var(--heading-font-family);
+}
+
+main .primary-series-doses-dose span {
+  font-size: 85px;
+  line-height: 90px;
+}
+
+main .primary-series-doses-dose span sup {
+  top: .1em;
+  vertical-align: super;
+  font-size: 75%;
+}
+
+main .primary-series-doses-dose u {
+  order: -1;
+  max-width: 100%;
+  margin-top: 46px;
+  padding: 13px 8px 13px;
+  background-color: var(--color-teal);
+  color: var(--background-color);
+  font-family: var(--strong-font-family);
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-font-size-s);
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  main .primary-series-doses {
+    margin-top: 60px;
+    border-bottom: 3px solid;
+  }
+
+  main .primary-series-doses div {
+    display: flex;
+    gap: 32px;
+  }
+
+  main .primary-series-doses-dose {
+    flex-grow: 1;
+    justify-content: center;
+    position: relative;
+    padding: 0 19px;
+  }
+
+  main .primary-series-doses-dose::after {
+    content: '';
+    bottom: -7.5px;
+    position: absolute;
+    width: 32px;
+    height: 13px;
+    background-color: currentcolor;
+  }
+
+
+  main .primary-series-doses-dose u {
+    position: absolute;
+    top: -90px;
+    right: -20px;
+    max-width: unset;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1136px) {
+  main .primary-series-doses-dose u {
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+  }
+}
+
+main .primary-series-doses-days {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 196px;
+  background-color: var(--background-color);
+  font-size: var(--body-font-size-s);
+  text-align: center;
+  background-color: transparent;
+}
+
+main .primary-series-doses-days::before,
+main .primary-series-doses-days::after {
+  content: '';
+  position: absolute;
+}
+
+main .primary-series-doses-days::before {
+  width: 1px;
+  height: 100%;
+  background-color: currentcolor;
+  z-index: -1;
+}
+
+main .primary-series-doses-days::after {
+  bottom: -2px;
+  border-top: 18px solid;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+main .primary-series-doses-days p {
+  margin: 0;
+  padding: 5px;
+  background-color: var(--background-color);
+}
+
+@media (min-width: 1024px) {
+  main .primary-series-doses-days {
+    width: 196px;
+  }
+
+  main .primary-series-doses-days::before {
+    width: 100%;
+    height: 1px;
+    background-color: currentcolor;
+    z-index: -1;
+  }
+  
+  main .primary-series-doses-days::after {
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    height: 0;
+    border-left: 18px solid;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+}
+
+/* info row */
+main .primary-series-info {
+  font-size: var(--body-font-size-m);
+}
+
+main .primary-series-info div {
+  padding: 20px 0;
+}
+
+main .primary-series-info div:not(:last-of-type) {
+  border-bottom: .2px solid;
+}
+
+main .primary-series-info p {
+  margin: 0;
+}
+
+main .primary-series-info p:first-of-type strong {
+  font-family: var(--extrabold-font-family);
+  font-size: var(--body-font-size-l);
+  font-weight: 800;
+  color: var(--color-purple);
+}
+
+main .primary-series-info :last-child p:first-of-type strong {
+  color: var(--color-teal);
+}
+
+main .primary-series-info p + p {
+  margin: 10px 0;
+}
+
+@media (min-width: 992px) {
+  main .primary-series-info {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  main .primary-series-info div {
+    flex: 0 1 50%;
+    padding: 0 40px;
+  }
+
+  main .primary-series-info div:not(:last-of-type) {
+    border-right: .2px solid;
+    border-bottom: 0;
+  }
+}
