@@ -16,28 +16,56 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
+// eslint-disable-next-line no-unused-vars
 function buildHeroBlock(main) {
-  //const h1 = main.querySelector('h1');
-  //const picture = main.querySelector('picture');
+  const h1 = main.querySelector('h1');
+  const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
-  //if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-  //  const section = document.createElement('div');
-  //  section.append(buildBlock('hero', { elems: [picture, h1] }));
-  //  main.prepend(section);
-  //}
+  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    const section = document.createElement('div');
+    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    main.prepend(section);
+  }
 }
 
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
+// eslint-disable-next-line no-unused-vars
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+    // buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+function decorateHypenatedWords(area) {
+  const walker = document.createTreeWalker(
+    area.documentElement ? area.body : area,
+    NodeFilter.SHOW_TEXT,
+    null,
+    false,
+  );
+
+  const regex = /(?=\S*['-])([a-zA-Z0-9'-]+)/g;
+  let node = walker.nextNode();
+  const hyphenatedNodes = [];
+
+  while (node) {
+    const found = regex.test(node.textContent);
+    if (found) hyphenatedNodes.push(node);
+    node = walker.nextNode();
+  }
+
+  hyphenatedNodes.forEach((h) => {
+    const parent = h.parentElement;
+    if (parent && parent.innerHTML) {
+      parent.innerHTML = parent.innerHTML.replaceAll(regex, (match) => `<nobr>${match}</nobr>`);
+    }
+  });
 }
 
 /**
@@ -49,6 +77,7 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
+  decorateHypenatedWords(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
@@ -95,8 +124,12 @@ async function loadLazy(doc) {
   const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector('header')).then(() => {
+    decorateHypenatedWords(doc.querySelector('header'));
+  });
+  loadFooter(doc.querySelector('footer')).then(() => {
+    decorateHypenatedWords(doc.querySelector('footer'));
+  });
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
