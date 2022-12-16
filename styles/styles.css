@@ -63,6 +63,41 @@
   }
 }
 
+/* fallback font for Impact */
+@font-face {
+  font-family: 'impact-fallback';
+  size-adjust: 90.62%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans */
+@font-face {
+  font-family: 'open-sans-fallback';
+  size-adjust: 104.77%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Condensed Bold */
+@font-face {
+  font-family: 'open-sans-condensed-bold-fallback';
+  size-adjust: 86.049%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Extrabold */
+@font-face {
+  font-family: 'open-sans-extrabold-fallback';
+  size-adjust: 115.611%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Bold */
+@font-face {
+  font-family: 'open-sans-bold-fallback';
+  size-adjust: 111.8%;
+  src: local('Arial');
+}
+
 @font-face {
   font-family: Impact;
   src: url('/fonts/Impact.ttf');
@@ -85,20 +120,6 @@
   font-family: 'Open Sans Condensed Bold';
   src: url('/fonts/OpenSans-CondensedBold.ttf');
   font-display: swap;
-}
-
-/* fallback font for Impact */
-@font-face {
-  font-family: impact-fallback;
-  size-adjust: 90.62%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans */
-@font-face {
-  font-family: open-sans-fallback;
-  size-adjust: 104.77%;
-  src: local('Arial');
 }
 
 body {
