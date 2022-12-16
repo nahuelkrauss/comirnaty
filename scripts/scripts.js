@@ -68,6 +68,14 @@ function decorateHypenatedWords(area) {
   });
 }
 
+function decorateFootnotes(main) {
+  const sups = main.querySelectorAll('sup');
+  sups.forEach((sup) => {
+    const parent = sup.parentElement;
+    if (parent.innerHTML.startsWith(sup.outerHTML)) parent.classList.add('footnote');
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -78,6 +86,7 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   decorateHypenatedWords(main);
+  decorateFootnotes(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
