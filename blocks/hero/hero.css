@@ -3,6 +3,10 @@ main .hero-container {
   padding: 0;
 }
 
+main .hero-wrapper {
+  max-width: unset;
+}
+
 main .hero {
   position: relative;
   background-color: var(--color-purple);
@@ -143,6 +147,6 @@ main .hero .hero-text .picture-wrapper + p::before {
   }
 
   main .hero .hero-text strong {
-    font-size: var(--body-font-size-l);
+    font-size: var(--body-font-size-xl);
   }
 }

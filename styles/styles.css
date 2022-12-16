@@ -26,13 +26,15 @@
 
   /* fonts */
   --body-font-family: 'Open Sans', 'open-sans-fallback', sans-serif;
-  --strong-font-family: 'Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
+  --bold-font-family: 'Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
+  --extrabold-font-family: 'Open Sans Extra Bold', 'open-sans-extra-bold-fallback', sans-serif;
   --condensed-font-family: 'Open Sans Condensed Bold', 'open-sans-condensed-bold-fallback', sans-serif;
   --heading-font-family: 'Impact', 'impact-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-l: 32px;
+  --body-font-size-xl: 32px;
+  --body-font-size-l: 24px;
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 17px;
@@ -65,35 +67,35 @@
 
 /* fallback font for Impact */
 @font-face {
-  font-family: 'impact-fallback';
+  font-family: impact-fallback;
   size-adjust: 90.62%;
   src: local('Arial');
 }
 
 /* fallback font for Open Sans */
 @font-face {
-  font-family: 'open-sans-fallback';
+  font-family: open-sans-fallback;
   size-adjust: 104.77%;
   src: local('Arial');
 }
 
 /* fallback font for Open Sans Condensed Bold */
 @font-face {
-  font-family: 'open-sans-condensed-bold-fallback';
+  font-family: open-sans-condensed-bold-fallback;
   size-adjust: 86.049%;
   src: local('Arial');
 }
 
 /* fallback font for Open Sans Extrabold */
 @font-face {
-  font-family: 'open-sans-extrabold-fallback';
+  font-family: open-sans-extra-bold-fallback;
   size-adjust: 115.611%;
   src: local('Arial');
 }
 
 /* fallback font for Open Sans Bold */
 @font-face {
-  font-family: 'open-sans-bold-fallback';
+  font-family: open-sans-bold-fallback;
   size-adjust: 111.8%;
   src: local('Arial');
 }
@@ -113,6 +115,12 @@
 @font-face {
   font-family: 'Open Sans Bold';
   src: url('/fonts/OpenSans-Bold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans Extra Bold';
+  src: url('/fonts/OpenSans-ExtraBold.ttf');
   font-display: swap;
 }
 
@@ -184,7 +192,7 @@ p, dl, ol, ul, pre, blockquote {
 }
 
 p strong, li strong {
-  font-family: var(--strong-font-family);
+  font-family: var(--bold-font-family);
   font-weight: 700;
 }
 
@@ -332,9 +340,9 @@ main .section {
   }  
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1012px;
     margin: auto;
   }
 }
