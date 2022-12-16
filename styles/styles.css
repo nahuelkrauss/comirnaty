@@ -389,6 +389,69 @@ main .section.highlight::after {
   }
 }
 
+main .section.texture {
+  padding-top: 44px;
+  background-image: url('../images/texture.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--background-color);
+}
+
+main .section.texture h2 {
+  width: 14ch;
+  margin: 0;
+  font-size: var(--heading-font-size-l);
+  line-height: 48px;
+}
+
+main .section.texture p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: var(--bold-font-family);
+}
+
+main .section.texture .button {
+  width: 100%;
+  margin: 55px 0 25px;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--condensed-font-family);
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+}
+
+@media (min-width: 1024px) {
+  main .section.texture {
+    padding: 70px 0 60px;
+  }
+
+  main .section.texture > div {
+    display: grid;
+    grid-template-columns: 567px 1fr;
+    gap: 0 40px;
+    align-items: center;
+  }
+
+  main .section.texture > div * {
+    grid-column-start: 1;
+  }
+
+  main .section.texture h2 {
+    width: unset;
+  }
+
+  main .section.texture .button-container {
+    grid-column-start: 2;
+    grid-row: 1 / span 2;
+  }
+
+  main .section.texture .button {
+    margin: 0;
+  }
+}
+
+
 main .section.highlight .default-content-wrapper {
   /* text-align: center; */
 }
