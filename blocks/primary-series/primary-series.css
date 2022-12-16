@@ -39,7 +39,7 @@ main .primary-series-doses-dose u {
   padding: 13px 8px;
   background-color: var(--color-teal);
   color: var(--background-color);
-  font-family: var(--strong-font-family);
+  font-family: var(--bold-font-family);
   font-size: var(--body-font-size-s);
   line-height: var(--body-font-size-s);
   text-align: center;
