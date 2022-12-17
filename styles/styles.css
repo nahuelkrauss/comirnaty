@@ -26,7 +26,7 @@
 
   /* fonts */
   --body-font-family: 'Open Sans', 'Remote Open Sans', 'open-sans-fallback', sans-serif;
-  --bold-font-family: 'XOpen Sans Bold', 'Remote Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
+  --bold-font-family: 'Open Sans Bold', 'Remote Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
   --extrabold-font-family: 'Open Sans Extra Bold', 'Remote Open Sans Extra Bold', 'open-sans-extra-bold-fallback', sans-serif;
   --condensed-font-family: 'Open Sans Condensed Bold', 'Remote Open Sans Condensed Bold', 'open-sans-condensed-bold-fallback', sans-serif;
   --heading-font-family: 'Impact', 'Remote Impact', 'impact-fallback', sans-serif;
@@ -96,7 +96,7 @@
 /* fallback font for Open Sans Bold */
 @font-face {
   font-family: open-sans-bold-fallback;
-  size-adjust: 100;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
