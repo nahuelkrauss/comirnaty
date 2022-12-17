@@ -172,4 +172,3 @@ if (params.get('performance')) {
     if (mod.default) mod.default();
   });
 }
-
