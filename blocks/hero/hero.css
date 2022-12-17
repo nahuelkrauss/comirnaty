@@ -51,7 +51,7 @@ main .hero .hero-text .picture-wrapper {
 }
 
 main .hero .hero-text .picture-wrapper img {
-  max-height: 40px;
+  height: 40px;
   width: auto;
 }
 
