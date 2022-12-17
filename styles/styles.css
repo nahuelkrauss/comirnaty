@@ -420,27 +420,3 @@ main .section.texture .button {
     margin: 0;
   }
 }
-
-
-main .section.highlight .default-content-wrapper {
-  /* text-align: center; */
-}
-
-main .section.highlight .default-content-wrapper > h2 {
-  /* font-size: var(--heading-font-size-mxl); */
-  /* color: var(--highlight-text-color); */
-  /* margin-top: 10px; */
-  /* margin-bottom: 10px; */
-  /* color: var(--highlight-text-color); */
-}
-
-main .section.highlight .default-content-wrapper > h1, h3, h4, h5 {
-  /* margin-top: 10px; */
-  /* margin-bottom: 10px; */
-  /* color: var(--highlight-text-color); */
-}
-
-main .section.highlight .default-content-wrapper > h5 {
-  /* font-size: var(--heading-font-size-xxs); */
-  /* color: var(--highlight-text-color); */
-}
