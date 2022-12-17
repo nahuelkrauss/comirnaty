@@ -100,36 +100,6 @@
   src: local('Arial');
 }
 
-@font-face {
-  font-family: Impact;
-  src: url('/fonts/Impact.ttf');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('/fonts/OpenSans.ttf');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Open Sans Bold';
-  src: url('/fonts/OpenSans-Bold.ttf');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Open Sans Extra Bold';
-  src: url('/fonts/OpenSans-ExtraBold.ttf');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Open Sans Condensed Bold';
-  src: url('/fonts/OpenSans-CondensedBold.ttf');
-  font-display: swap;
-}
-
 body {
   display: none;
   margin: 0;
