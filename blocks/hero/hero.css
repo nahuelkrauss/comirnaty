@@ -51,13 +51,13 @@ main .hero .hero-text .picture-wrapper {
 }
 
 main .hero .hero-text .picture-wrapper img {
-  max-height: 40px;
+  height: 40px;
   width: auto;
 }
 
 main .hero .hero-text .picture-wrapper + p {
   position: relative;
-  padding-top: 22px;
+  border: 1px solid green;
 }
 
 main .hero .hero-text .picture-wrapper + p::before {

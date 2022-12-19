@@ -1,31 +1,31 @@
 /* below the fold CSS goes here */
 
 @font-face {
-    font-family: Impact;
+    font-family: 'Remote Impact';
     src: url('/fonts/Impact.ttf');
     font-display: swap;
   }
   
   @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Remote Open Sans';
     src: url('/fonts/OpenSans.ttf');
     font-display: swap;
   }
   
   @font-face {
-    font-family: 'Open Sans Bold';
+    font-family: 'Remote Open Sans Bold';
     src: url('/fonts/OpenSans-Bold.ttf');
     font-display: swap;
   }
   
   @font-face {
-    font-family: 'Open Sans Extra Bold';
+    font-family: 'Remote Open Sans Extra Bold';
     src: url('/fonts/OpenSans-ExtraBold.ttf');
     font-display: swap;
   }
   
   @font-face {
-    font-family: 'Open Sans Condensed Bold';
+    font-family: 'Remote Open Sans Condensed Bold';
     src: url('/fonts/OpenSans-CondensedBold.ttf');
     font-display: swap;
   }

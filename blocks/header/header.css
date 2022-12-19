@@ -99,6 +99,17 @@ header nav .nav-brand svg {
   height: auto;
 }
 
+header nav .nav-brand .icon-pfizer {
+  height: 34px;
+  width: 84px;
+}
+
+header nav .nav-brand .icon-biontech {
+  height: 28px;
+  width: 129px;
+}
+
+
 @media (min-width: 1024px) {
   header .nav-brand {
     padding-left: 30px;
