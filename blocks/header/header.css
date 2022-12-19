@@ -45,6 +45,10 @@ header nav > * {
   z-index: 2;
 }
 
+header .nav-hamburger-links ul li strong, header .nav-links ul li strong {
+  font-family: unset;
+}
+
 @media (min-width: 1024px) {
   header nav {
     grid-template: 
