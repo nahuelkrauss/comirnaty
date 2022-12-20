@@ -49,7 +49,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 180px;
+  --nav-height: 328px;
 }
 
 @media (min-width: 363px) {
@@ -61,7 +61,7 @@
 @media (min-width: 1024px) {
   :root {
     --heading-font-size-xxl: 50px;
-    --nav-height: 196px;
+    --nav-height: 264px;
   }
 }
 

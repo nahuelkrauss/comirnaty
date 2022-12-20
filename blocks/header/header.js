@@ -53,6 +53,25 @@ function decorateLinks(section) {
   }
 }
 
+async function fillBanner(banner) {
+  const resp = await fetch('/top-banner.plain.html');
+
+  if (resp.ok) {
+    const html = await resp.text();
+    banner.innerHTML = html;
+    const section = banner.querySelector('div');
+    section.classList.add('header-banner-section');
+    const button = banner.querySelector('a');
+    const div = document.createElement('div');
+    div.classList = 'header-banner-cta';
+    const buttonContainer = button.closest('p');
+    buttonContainer.classList.add('button-container');
+    button.classList.add('button', 'primary');
+    div.append(buttonContainer);
+    banner.append(div);
+  }
+}
+
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -61,9 +80,15 @@ export default async function decorate(block) {
   const config = readBlockConfig(block);
   block.textContent = '';
 
+  const banner = document.createElement('div');
+  banner.classList.add('header-banner');
+  block.append(banner);
+  fillBanner(banner);
+
   // fetch nav content
   const navPath = config.nav || '/nav';
   const resp = await fetch(`${navPath}.plain.html`);
+
   if (resp.ok) {
     const html = await resp.text();
 

@@ -3,6 +3,68 @@ header {
   height: var(--nav-height);
 }
 
+header .header-banner {
+  background-color:  var(--color-teal);
+  height: 148px;
+  padding: 20px 20px 16px;
+  box-sizing: border-box;
+  font-family: var(--condensed-font-family);
+  color: white;
+  display: grid;
+}
+
+header .header-banner img {
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
+  position: relative;
+}
+
+header .header-banner-section {
+  display: flex;
+  font-size: var(--body-font-size-s);
+  margin: auto;
+  line-height: 20px;
+}
+
+header .header-banner p {
+  margin: 0;
+}
+
+header .header-banner-cta {
+  margin: auto;
+}
+
+header .header-banner-cta .button {
+  margin-top: 10px;
+  font-size: var(--body-font-size-s);
+  color: var(--color-teal);
+  background-color: white;
+  font-family: var(--heading-font-family);
+  padding: 8px 39px;
+  line-height: normal;
+}
+
+@media (min-width: 1024px) {
+  header .header-banner-cta .button {
+    margin-top: 0px;
+  }
+  
+  header .header-banner {
+    display: flex;
+    padding: 15px;
+    height: 68px;
+  }
+
+  header .header-banner img {
+    height: 80px;
+    z-index: 3;
+    margin-top: -10px;
+  }
+
+}
+
+
 header nav {
   box-sizing: border-box;
   display: grid; 
