@@ -398,7 +398,7 @@ main .section.texture .button:hover {
 
 @media (min-width: 1024px) {
   main .section.texture {
-    padding: 70px 0 60px;
+    padding: 70px 20px 60px;
   }
 
   main .section.texture > div {
@@ -423,5 +423,55 @@ main .section.texture .button:hover {
 
   main .section.texture .button {
     margin: 0;
+  }
+}
+
+main .section.bordered-heading h2,
+main .section.bordered-heading h3 {
+  color: var(--color-blue);
+}
+
+main .section.bordered-heading h2 {
+  padding: 30px 0 40px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-image: url('../../images/divider.png') 3;
+  font-size: 30px;
+  line-height: 27px;
+  text-align: center;
+}
+
+main .section.bordered-heading h2 ~ p {
+  font-size: var(--body-font-size-s);
+  line-height: 21.6px;
+}
+
+main .section.bordered-heading h3 {
+  font-size: 30px;
+  line-height: 33px;
+}
+
+main .section.bordered-heading h3,
+main .section.bordered-heading .block {
+  max-width: 794px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  main .section.bordered-heading h2 {
+    font-size: 42px;
+    line-height: 37.8px;
+  }
+
+  main .section.bordered-heading h2 ~ p {
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+  }
+
+  main .section.bordered-heading h3 {
+    font-size: 32px;
+    line-height: 48px;
   }
 }
