@@ -168,7 +168,8 @@ p strong, li strong {
 
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
   overflow-wrap: break-word;
 }
 
@@ -450,8 +451,10 @@ main .section.bordered-heading h3 {
   font-size: 30px;
   line-height: 33px;
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
+main .section.bordered-heading p,
 main .section.bordered-heading h3,
+main .section.bordered-heading ul,
 main .section.bordered-heading .block {
   max-width: 794px;
   margin-left: auto;
@@ -473,5 +476,42 @@ main .section.bordered-heading .block {
   main .section.bordered-heading h3 {
     font-size: 32px;
     line-height: 48px;
+  }
+}
+
+/* important safety info */
+main .section[data-id=important-safety-info-content]::after {
+  display: none;
+}
+
+main .section[data-id=important-safety-info-content] h2,
+main .section[data-id=important-safety-info-content] h3 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+main .section[data-id=important-safety-info-content] h2 {
+  font-size: 42px;
+  line-height: 38px;
+}
+
+main .section[data-id=important-safety-info-content] h2 ~ p {
+  font-size: var(--body-font-size-m);
+  line-height: 28px;
+}
+
+@media (min-width: 1024px) {
+  main .section[data-id=important-safety-info-content] {
+    padding-left: 20px;
+  }
+
+  main .section.bordered-heading h2 {
+    max-width: 794px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .section[data-id=important-safety-info-content] h2 ~ p {
+    text-align: left;
   }
 }
