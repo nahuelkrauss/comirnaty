@@ -1,0 +1,90 @@
+main .faq button {
+  position: relative;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: unset;
+  font-family: var(--bold-font-family);
+  font-size: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+/* controls */
+main .faq .faq-controls {
+  display: flex;
+  gap: 39px;
+  margin-bottom: 15px;
+}
+
+main .faq .faq-control {
+  flex: 1 1 max-content;
+  color: var(--color-teal);
+  font-size: 19px;
+}
+
+main .faq .faq-control.faq-collapse {
+  color: var( --color-blue);
+}
+
+main .faq .faq-control p {
+  display: inline-block;
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+}
+
+main .faq .faq-control span {
+  color: var(--color-red);
+  font-size: 150%;
+  line-height: .7;
+}
+
+/* question */
+main .faq .faq-q {
+  width: 100%;
+  margin-bottom: 14px;
+  border-bottom: 3px solid transparent;
+  border-image: url('../../images/divider.png') 3;
+  padding: 6px 40px 14px 0;
+  background-color: unset;
+  color: var(--color-purple);
+  font-size: inherit;
+  text-align: inherit;
+}
+
+main .faq .faq-q::before,
+main .faq .faq-q::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-red);
+}
+
+main .faq .faq-q::before {
+  right: 8.5px;
+  width: 5px;
+  height: 22px;
+}
+
+main .faq .faq-q::after {
+  right: 0;
+  width: 22px;
+  height: 5px;
+}
+
+main .faq .faq-q[aria-expanded=true]::before {
+  opacity: 0;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* answer */
+main .faq .faq-a {
+  margin: 10px 0;
+}
+
+main .faq .faq-q[aria-expanded=false] + .faq-a {
+  display: none;
+  visibility: hidden;
+}
