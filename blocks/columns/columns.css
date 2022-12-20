@@ -1,25 +1,39 @@
-.columns > div {
+main .columns > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main .columns img {
+  width: 100%;
+}
+
+main .columns .button {
+  width: 100%;
+  padding: 20px;
+  font-family: var(--heading-font-family);
+}
+
+@media (min-width: 1024px) {
+  main .columns > div {
+    display: flex;
+    flex-direction: unset;
+  }
+
+  main .columns > div > div {
+    flex: 1;
     display: flex;
     flex-direction: column;
-}
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 
-.columns img {
-    width: 100%;
-}
+  main .columns > div > div:first-of-type {
+    margin-left: unset;
+  }
 
-@media (min-width: 900px) {
-    .columns > div {
-        display: flex;
-        align-items: center;
-        flex-direction: unset;
-    }
-
-    .columns > div > div {
-        flex: 1;
-        margin-left: 32px;
-    }
-
-    .columns > div > div:first-of-type {
-        margin-left: unset;
-    }
+  main .columns.columns-2-cols > div > div:first-of-type {
+    border-right: 3px solid transparent;
+    border-image: url('../../images/divider.png') 3;
+  }
 }
