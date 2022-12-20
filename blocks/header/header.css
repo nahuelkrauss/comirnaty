@@ -47,7 +47,7 @@ header .header-banner-cta .button {
 
 @media (min-width: 1024px) {
   header .header-banner-cta .button {
-    margin-top: 0px;
+    margin-top: 0;
   }
   
   header .header-banner {
@@ -61,9 +61,7 @@ header .header-banner-cta .button {
     z-index: 3;
     margin-top: -10px;
   }
-
 }
-
 
 header nav {
   box-sizing: border-box;
@@ -130,7 +128,7 @@ header nav ul {
   list-style: none;
   padding: 0;
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
 header nav p {
   margin: 0;
 }
@@ -297,7 +295,7 @@ header nav .nav-navigation li:first-of-type {
 header nav .nav-navigation li:first-of-type a {
   color: var(--background-color);
 }
-
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-navigation strong {
   font-family: var(--heading-font-family);
 }
