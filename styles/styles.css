@@ -391,6 +391,11 @@ main .section.texture .button {
   line-height: 21px;
 }
 
+main .section.texture .button:hover {
+  text-decoration: underline;
+}
+
+
 @media (min-width: 1024px) {
   main .section.texture {
     padding: 70px 0 60px;
