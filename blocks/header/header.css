@@ -278,6 +278,7 @@ header nav[aria-expanded=true] .nav-navigation {
 
 header nav .nav-navigation a {
   padding-bottom: 10px;
+  height: 72px;
 }
 
 header nav .nav-navigation ul {
