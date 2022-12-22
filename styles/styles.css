@@ -29,7 +29,7 @@
   --bold-font-family: 'Open Sans Bold', 'Remote Open Sans Bold', 'open-sans-bold-fallback', sans-serif;
   --extrabold-font-family: 'Open Sans Extra Bold', 'Remote Open Sans Extra Bold', 'open-sans-extra-bold-fallback', sans-serif;
   --condensed-font-family: 'Open Sans Condensed Bold', 'Remote Open Sans Condensed Bold', 'open-sans-condensed-bold-fallback', sans-serif;
-  --heading-font-family: 'Impact', 'Remote Impact', 'impact-fallback', sans-serif;
+  --heading-font-family: 'Remote Impact', 'impact-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
