@@ -10,6 +10,41 @@
  * governing permissions and limitations under the License.
  */
 
+/* fallback font for Impact */
+@font-face {
+  font-family: impact-fallback;
+  size-adjust: 90.639%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans */
+@font-face {
+  font-family: open-sans-fallback;
+  size-adjust: 104.77%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Condensed Bold */
+@font-face {
+  font-family: open-sans-condensed-bold-fallback;
+  size-adjust: 86.049%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Extrabold */
+@font-face {
+  font-family: open-sans-extra-bold-fallback;
+  size-adjust: 115.611%;
+  src: local('Arial');
+}
+
+/* fallback font for Open Sans Bold */
+@font-face {
+  font-family: open-sans-bold-fallback;
+  size-adjust: 100%;
+  src: local('Arial');
+}
+
  :root {
   /* colors */
   --color-red: #D14232;
@@ -63,41 +98,6 @@
     --heading-font-size-xxl: 50px;
     --nav-height: 264px;
   }
-}
-
-/* fallback font for Impact */
-@font-face {
-  font-family: impact-fallback;
-  size-adjust: 90.639%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans */
-@font-face {
-  font-family: open-sans-fallback;
-  size-adjust: 104.77%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans Condensed Bold */
-@font-face {
-  font-family: open-sans-condensed-bold-fallback;
-  size-adjust: 86.049%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans Extrabold */
-@font-face {
-  font-family: open-sans-extra-bold-fallback;
-  size-adjust: 115.611%;
-  src: local('Arial');
-}
-
-/* fallback font for Open Sans Bold */
-@font-face {
-  font-family: open-sans-bold-fallback;
-  size-adjust: 100%;
-  src: local('Arial');
 }
 
 body {
