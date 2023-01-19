@@ -278,6 +278,7 @@ header nav[aria-expanded=true] .nav-navigation {
 
 header nav .nav-navigation a {
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 header nav .nav-navigation ul {
@@ -405,6 +406,7 @@ header nav .nav-links li {
 /* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-links a:any-link {
   border-bottom: 1px solid;
+  text-decoration: none;
 }
 
 header nav .nav-links .fullscreen {
@@ -450,6 +452,10 @@ header nav .nav-hamburger-links {
 header nav[aria-expanded=true] .nav-hamburger-links {
   display: unset;
   visibility: visible;
+}
+
+header nav[aria-expanded=true] .nav-hamburger-links a {
+  text-decoration: none;
 }
 /* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-hamburger-links li {
