@@ -128,7 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h4, h5, h6 {
-  font-family: var(--body-font-family);
+  font-family: var(--bold-font-family);
+  font-weight: 700;
 }
 
 h1 {
@@ -452,11 +453,10 @@ main .section.bordered-heading h3 {
   line-height: 33px;
 }
 /* stylelint-disable-next-line no-descending-specificity */
-main .section.bordered-heading p,
-main .section.bordered-heading h3,
-main .section.bordered-heading ul,
-main .section.bordered-heading .block {
-  max-width: 794px;
+main .section.bordered-heading .default-content-wrapper,
+main .section.bordered-heading .block.faq,
+main .section.bordered-heading .block.columns {
+  max-width: min(100%, 794px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -514,4 +514,26 @@ main .section[data-id=important-safety-info-content] h2 ~ p {
   main .section[data-id=important-safety-info-content] h2 ~ p {
     text-align: left;
   }
+}
+
+.icon.icon-arrow-up {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+
+.icon.icon-arrow-up::after {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: .375em;
+  left: .25em;
+  transform: rotate(45deg);
+  width: .5em;
+  height: .5em;
+  border-top: 4px solid;
+  border-left: 4px solid;
 }

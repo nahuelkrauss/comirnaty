@@ -1,0 +1,151 @@
+main .sticky-preview {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  padding: 17px 25px 8px;
+  background-color: var(--background-color);
+  font-size: 16px;
+  line-height: 20px;
+  transition: height .2s;
+}
+
+main .sticky-preview.expanded {
+  height: 283px;
+}
+
+main .sticky-preview[aria-hidden=true] {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 1024px) {
+  main .sticky-preview {
+    height: 16vh;
+  }
+
+  main .sticky-preview.expanded {
+    height: 42vh;
+  }
+}
+
+main .sticky-preview > div > div {
+  visibility: hidden;
+  display: none;
+}
+
+main .sticky-preview > div > .sticky-preview-default {
+  visibility: visible;
+  display: unset;
+}
+
+@media (min-width: 1024px) {
+  main .sticky-preview > div {
+    display: grid;
+    grid-template-columns: 357px 1fr;
+    gap: 78px;
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  main .sticky-preview > div > div {
+    min-width: 0;
+    visibility: visible;
+    display: unset;
+  }
+
+  main .sticky-preview > div > div:first-child {
+    border-right: 3px solid transparent;
+    border-image: url('../../images/divider.png') 1;
+    padding-right: 26px;
+  }
+}
+
+main .sticky-preview .sticky-preview-footer {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 17px 25px;
+  background-color: var(--overlay-background-color);
+  font-family: var(--condensed-font-family);
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -.5px;
+}
+
+main .sticky-preview.expanded .sticky-preview-footer {
+  display: unset;
+  visibility: visible;
+}
+
+main .sticky-preview .sticky-preview-footer a {
+  position: relative;
+  padding-right: 27px;
+  color: var(--color-purple);
+  text-decoration-thickness: initial;
+}
+
+main .sticky-preview .sticky-preview-footer a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  border-top: 12px solid var(--color-red);
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+}
+
+@media (min-width: 1024px) {
+  main .sticky-preview.expanded .sticky-preview-footer {
+    display: grid;
+    grid-template-columns: 357px 1fr;
+    gap: 78px;
+    padding: 20px 25px;
+    background-color: var(--background-color);
+    font-size: 19px;
+  }
+
+  main .sticky-preview .sticky-preview-footer p {
+    margin: 0;
+  }
+}
+
+main .sticky-preview button {
+  position: absolute;
+  top: 12px;
+  right: 25px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-purple);
+  font-size: var(--body-font-size-xl);
+  cursor: pointer;
+}
+
+main .sticky-preview button span {
+  transition: transform .2s;
+}
+
+main .sticky-preview.expanded button span {
+  transform: rotate(180deg);
+}
+
+main .sticky-preview .sticky-preview-heading {
+  color: var(--color-blue);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+main .sticky-preview .sticky-preview-heading + p {
+  margin-top: .5em;
+}
