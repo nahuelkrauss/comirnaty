@@ -1,0 +1,14 @@
+{
+    "project": "Comirnaty",
+    "plugins": [
+      {
+        "id": "library",
+        "title": "Library",
+        "environments": [ "edit" ],
+        "isPalette": true,
+        "paletteRect": "top: auto; bottom: 20px; left: 20px; height: 398px; width: 360px;",
+        "url": "https://main--milo--adobecom.hlx.page/tools/library?assets=https%3A%2F%2Fhook.app.workfrontfusion.com%2Fsxpq3kch33mktgchbcoo1nwmvh5i9fc3&&library=https%3A%2F%2Fmain--comirnaty--hlxsites.hlx.page%2Fdocs%2Flibrary%2Flibrary.json",
+        "includePaths": [ "**.docx**" ]
+      }
+    ]
+}
