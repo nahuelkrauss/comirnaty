@@ -76,12 +76,48 @@ function decorateFootnotes(main) {
   });
 }
 
+function decorateSVGs(main) {
+  const anchors = main.querySelectorAll('a');
+  anchors.forEach((a) => {
+    // SVG check
+    const { textContent } = a;
+    if (!textContent.includes('.svg')) return;
+
+    // Mine for URL and Alt text
+    const splitText = textContent.split('|');
+    const textUrl = new URL(splitText.shift().trim());
+    const altText = splitText.join().trim();
+
+    // Franklin relative link checking
+    const svgUrl = a.href.startsWith('/') ?
+      new URL(`${window.location.origin}${a.href}`) :
+      new URL(a.href);
+
+    // Create the image
+    const img = document.createElement('img');
+    img.setAttribute('loading', 'lazy');
+    img.src = textUrl;
+    if (altText) img.alt = altText;
+
+    // If the paths are the same, replace the image,
+    // otherwise the link goes somewhere important and
+    // we need to preserve it.
+    if (textUrl.pathname === svgUrl.pathname) {
+      a.parentElement.replaceChild(img, a);
+    } else {
+      a.textContent = '';
+      a.append(img);
+    }
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  decorateSVGs(main);
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
