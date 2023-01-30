@@ -89,9 +89,9 @@ function decorateSVGs(main) {
     const altText = splitText.join().trim();
 
     // Franklin relative link checking
-    const svgUrl = a.href.startsWith('/') ?
-      new URL(`${window.location.origin}${a.href}`) :
-      new URL(a.href);
+    const svgUrl = a.href.startsWith('/')
+      ? new URL(`${window.location.origin}${a.href}`)
+      : new URL(a.href);
 
     // Create the image
     const img = document.createElement('img');
