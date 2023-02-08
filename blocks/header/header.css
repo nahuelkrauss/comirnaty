@@ -454,9 +454,11 @@ header nav[aria-expanded=true] .nav-hamburger-links {
   visibility: visible;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 header nav[aria-expanded=true] .nav-hamburger-links a {
   text-decoration: none;
 }
+
 /* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-hamburger-links li {
   padding: 16px 0;
